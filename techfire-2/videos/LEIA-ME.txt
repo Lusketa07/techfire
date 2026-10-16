@@ -1,0 +1,2 @@
+Coloque aqui o vídeo da gameplay do jogo em MP4: jogo.mp4
+(ou use o YouTube em CONFIG.videoJogo no arquivo js/config.js)

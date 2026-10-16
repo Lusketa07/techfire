@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Informações do Fabricante · TechFire GuardFlame</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  /* Aplica o tema salvo antes de desenhar a página (evita "piscar") */
+  try { var t = localStorage.getItem('gf_tema'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+<link rel="stylesheet" href="../css/estilo.css">
+<link rel="stylesheet" href="fabricante.css">
+</head>
+<body data-raiz="../">
+
+<!-- Topo (menu): montado pelo js/layout.js -->
+<div id="topo"></div>
+
+<main>
+<div class="wrap page-title">
+  <span class="tag"><span data-icon="file"></span>Fabricante: TechFire</span>
+  <h1>Informações do Fabricante</h1>
+  <p>As regras da ANAC, do DECEA e da Anatel para operar o GuardFlame legalmente no Brasil. Leia antes do primeiro voo.</p>
+  <p class="atualizado num">Atualizado em outubro de 2026 · RBAC nº 100 (ANAC) e ICA 100-40 (DECEA)</p>
+</div>
+
+<!-- ============ O GUARDFLAME NAS REGRAS ============ -->
+<div class="section tight">
+  <div class="wrap">
+    <div class="enquadra">
+      <div>
+        <h2>Onde o GuardFlame se encaixa</h2>
+        <p>O GuardFlame (frame F450, bateria 4S, Pixhawk e Raspberry Pi) pesa <b>bem mais de 250 g</b> e voa na linha de visada, até 120 m de altura. Por isso ele entra na <b>categoria Aberta</b> do RBAC nº 100 e precisa cumprir tudo o que está ao lado.</p>
+        <div class="selos">
+          <span>Peso &gt; 250 g</span><span>Categoria Aberta</span><span>Uso não recreativo</span>
+        </div>
+      </div>
+      <ul class="obrig">
+        <li><span data-icon="check"></span><div>Drone cadastrado no <b>SISANT</b>, com etiqueta de identificação</div></li>
+        <li><span data-icon="check"></span><div>Voo autorizado no <b>SARPAS</b> (DECEA) antes de decolar</div></li>
+        <li><span data-icon="check"></span><div><b>Seguro RETA</b> de danos a terceiros em dia</div></li>
+        <li><span data-icon="check"></span><div>Rádio e controle <b>homologados pela Anatel</b></div></li>
+        <li><span data-icon="check"></span><div>Piloto aprovado no <b>exame teórico da ANAC</b> (obrigatório a partir de 01/01/2027)</div></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============ O QUE MUDOU EM 2026 ============ -->
+<div class="section alt">
+  <div class="wrap">
+    <div class="section-head"><h2>O que mudou em 2026</h2><p class="muted">A ANAC trocou o antigo RBAC-E nº 94 por um regulamento novo, e o DECEA passou a exigir autorização para todos os drones.</p></div>
+    <ol class="linha-tempo">
+      <li><time>16/06/2026</time><b>RBAC nº 100 entra em vigor</b><span>Resolução ANAC nº 805 substitui o RBAC-E nº 94. A Resolução nº 806 trata dos drones de até 250 g e dos aeromodelos.</span></li>
+      <li><time>01/07/2026</time><b>Nova ICA 100-40 do DECEA</b><span>Todo voo precisa de autorização no SARPAS, inclusive de drones com até 250 g.</span></li>
+      <li><time>01/01/2027</time><b>Exame teórico obrigatório</b><span>Pilotos de drones acima de 250 g fora do uso recreativo precisam ser aprovados no exame da ANAC.</span></li>
+      <li><time>16/06/2028</time><b>Fim da transição</b><span>Acaba o prazo para quem ainda opera com autorizações do antigo RBAC-E nº 94.</span></li>
+    </ol>
+
+    <h3 class="sub-titulo">As três categorias de operação</h3>
+    <div class="grid g3">
+      <div class="card cat ativa"><span class="tag">GuardFlame</span><h3>Aberta</h3><p class="muted">Baixo risco. Até 25 kg, na linha de visada, até 120 m de altura e longe de pessoas não envolvidas. <b>Não precisa de autorização prévia da ANAC</b> se cumprir todos os limites.</p></div>
+      <div class="card cat"><h3>Específica</h3><p class="muted">Risco médio: voo além da linha de visada (BVLOS), acima de 120 m, acima de 25 kg ou perto de pessoas. Exige análise de risco e autorização da ANAC.</p></div>
+      <div class="card cat"><h3>Certificada</h3><p class="muted">Alto risco, como transporte de cargas perigosas ou de pessoas. Exige certificação da aeronave e do operador.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ REGRAS ============ -->
+<div class="section">
+  <div class="wrap">
+    <div class="section-head"><h2>Regras para voar</h2><p class="muted">Cada cartão é uma obrigação. Descumprir qualquer uma delas torna o voo irregular.</p></div>
+
+    <h3 class="grupo"><span class="ic" data-icon="id"></span>Cadastro e documentos</h3>
+    <div class="grid g3 regras">
+      <article class="card regra">
+        <span class="orgao">ANAC</span>
+        <h3>Cadastro no SISANT</h3>
+        <p>Todo drone com peso máximo de decolagem <b>acima de 250 g</b> deve ser cadastrado no SISANT (Sistema de Aeronaves Não Tripuladas) <b>antes de qualquer voo</b>.</p>
+        <ul><li>Cadastro gratuito, por equipamento e por operador (CPF ou CNPJ)</li><li>Vale 24 meses e precisa ser renovado</li></ul>
+      </article>
+      <article class="card regra">
+        <span class="orgao">ANAC</span>
+        <h3>Operador identificado</h3>
+        <p>O dono ou operador precisa estar cadastrado e identificado na ANAC. O drone deve levar uma <b>etiqueta com o número de cadastro (código SISANT)</b>, legível e resistente.</p>
+      </article>
+      <article class="card regra">
+        <span class="orgao">ANAC · DECEA</span>
+        <h3>A regra dos 250 g</h3>
+        <p>Pela ANAC, drones de <b>até 250 g</b> continuam dispensados de cadastro e de seguro. Mas, desde 01/07/2026, o DECEA exige SARPAS para eles também, e o SARPAS só aceita drones cadastrados no SISANT. <b>Na prática, todos precisam se cadastrar.</b></p>
+      </article>
+      <article class="card regra">
+        <span class="orgao">ANAC</span>
+        <h3>Seguro RETA</h3>
+        <p>Drones acima de 250 g em uso <b>não recreativo</b> precisam do seguro RETA (Responsabilidade do Explorador ou Transportador Aéreo), que cobre danos a terceiros. <b>Voar sem ele é operação ilegal</b> e sujeita a autuação.</p>
+      </article>
+      <article class="card regra">
+        <span class="orgao">ANAC</span>
+        <h3>Idade e exame do piloto</h3>
+        <p>O piloto responsável deve ter <b>18 anos ou mais</b>. Menores só podem pilotar acompanhados de um piloto maior de idade, que responde pela operação. A partir de 2027 o piloto também precisa do exame teórico da ANAC (gratuito e online).</p>
+      </article>
+      <article class="card regra">
+        <span class="orgao">Anatel</span>
+        <h3>Homologação na Anatel</h3>
+        <p>O drone, o rádio controle e os transmissores de vídeo usam radiofrequência e precisam ser <b>homologados pela Anatel</b>. Modelos vendidos oficialmente no Brasil já vêm homologados; peças importadas por conta própria podem não ser.</p>
+      </article>
+    </div>
+
+    <h3 class="grupo"><span class="ic" data-icon="plane"></span>Espaço aéreo e voo</h3>
+    <div class="grid g3 regras">
+      <article class="card regra destaque">
+        <span class="orgao">DECEA</span>
+        <span class="valor">SARPAS</span>
+        <h3>Autorização do espaço aéreo</h3>
+        <p>Antes de decolar, peça acesso ao espaço aéreo no <b>SARPAS</b>, do DECEA. Desde <b>1º de julho de 2026</b> (ICA 100-40) isso vale também para drones de até 250 g.</p>
+      </article>
+      <article class="card regra destaque">
+        <span class="orgao">ANAC</span>
+        <span class="valor num">120 m</span>
+        <h3>Altura máxima</h3>
+        <p>Voo limitado a <b>120 metros (400 pés)</b> acima do solo. Mais alto que isso, a operação sai da categoria Aberta e exige autorização específica.</p>
+      </article>
+      <article class="card regra destaque">
+        <span class="orgao">ANAC</span>
+        <span class="valor num">30 m</span>
+        <h3>Distância de pessoas</h3>
+        <p>Mantenha no mínimo <b>30 metros na horizontal</b> de pessoas que não fazem parte da operação. Nunca sobrevoe aglomerações.</p>
+      </article>
+      <article class="card regra">
+        <span class="orgao">ANAC · DECEA</span>
+        <h3>Linha de visada (VLOS)</h3>
+        <p>O piloto deve ver o drone <b>o tempo todo, a olho nu</b>. Voar além da linha de visada (<b>BVLOS</b>), ou com óculos FPV sem um observador, só com autorização específica.</p>
+      </article>
+      <article class="card regra">
+        <span class="orgao">DECEA</span>
+        <h3>Aeroportos e áreas restritas</h3>
+        <p>É proibido voar perto de aeroportos, aeródromos e heliportos sem autorização, respeitando as áreas de aproximação das aeronaves. Também são proibidas áreas restritas, como presídios e instalações militares. Em unidades de conservação, peça autorização ao órgão gestor (ex.: ICMBio).</p>
+      </article>
+      <article class="card regra">
+        <span class="orgao">Fabricante</span>
+        <h3>Locais fechados</h3>
+        <p>Um local totalmente fechado (ginásio, galpão) não faz parte do espaço aéreo, então lá o voo não depende do SARPAS e a responsabilidade é do dono do local. <b>Regra do fabricante: o GuardFlame não deve decolar em ambientes fechados.</b> Ele foi feito para voar ao ar livre: dentro de um prédio fica sem sinal de GPS e as hélices de 10" colocam as pessoas em risco.</p>
+      </article>
+      <article class="card regra">
+        <span class="orgao">ANAC · DECEA</span>
+        <h3>Uso recreativo (aeromodelismo)</h3>
+        <p>A única dispensa do SARPAS é o voo <b>só por lazer</b> em um espaço aéreo condicionado destinado ao aeromodelismo, como um clube. Lá os limites são <b>60 m de altura</b> e <b>300 m</b> de distância do piloto. O GuardFlame não é recreativo, então essa dispensa não vale para ele.</p>
+      </article>
+    </div>
+
+    <h3 class="grupo"><span class="ic" data-icon="scale"></span>Responsabilidades e penalidades</h3>
+    <div class="penal card">
+      <div>
+        <p>O operador <b>responde por qualquer dano</b> que o drone causar a pessoas, animais ou propriedades. Quem descumpre as normas pode sofrer:</p>
+        <ul class="lista-x">
+          <li>Multas e sanções administrativas da ANAC</li>
+          <li>Suspensão ou cancelamento do cadastro</li>
+          <li>Apreensão do equipamento</li>
+          <li>Processo civil e criminal. Expor uma aeronave a perigo é crime (Código Penal, art. 261), e voar sem autorização perto de aeroportos é tratado pelo DECEA como ato de interferência ilícita.</li>
+        </ul>
+      </div>
+      <div class="pode-nao">
+        <div><h4><span data-icon="check"></span>Pode</h4><ul><li>Voar de dia, ao ar livre, com SARPAS aprovado</li><li>Até 120 m, sempre vendo o drone</li><li>Sobrevoar mata e área rural sem pessoas</li></ul></div>
+        <div class="nao"><h4><span data-icon="ban"></span>Não pode</h4><ul><li>Voar sem cadastro, seguro ou autorização</li><li>Passar perto de aeroportos e sobre multidões</li><li>Filmar pessoas sem consentimento (LGPD)</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ANTES DE CADA VOO ============ -->
+<div class="section alt">
+  <div class="wrap grid g2">
+    <div>
+      <h2>Checklist antes de cada voo</h2>
+      <p class="muted">Marque cada item. A lista fica salva neste navegador até você limpar.</p>
+      <ul class="check-voo" id="checkVoo">
+        <li><label><input type="checkbox">Cadastro SISANT válido e etiqueta no drone</label></li>
+        <li><label><input type="checkbox">Seguro RETA em dia (apólice no celular)</label></li>
+        <li><label><input type="checkbox">Voo aprovado no SARPAS para o local e o horário</label></li>
+        <li><label><input type="checkbox">Local longe de aeroportos e sem pessoas a menos de 30 m</label></li>
+        <li><label><input type="checkbox">Bateria carregada e hélices sem trincas</label></li>
+        <li><label><input type="checkbox">GPS com satélites suficientes antes de decolar</label></li>
+        <li><label><input type="checkbox">Observador ao lado para ajudar a manter a linha de visada</label></li>
+      </ul>
+      <button class="btn btn-line btn-sm" id="limparCheck" type="button">Limpar checklist</button>
+    </div>
+    <div>
+      <h2>Sites oficiais</h2>
+      <p class="muted">As regras mudam. Confira sempre a versão mais recente nos sites dos órgãos.</p>
+      <div class="oficiais">
+        <a href="https://www.gov.br/anac/pt-br/assuntos/drones" target="_blank" rel="noopener"><b>ANAC · Drones</b><span>Regras, RBAC nº 100 e exame teórico</span></a>
+        <a href="https://sistemas.anac.gov.br/sisant" target="_blank" rel="noopener"><b>SISANT</b><span>Cadastro do drone e do operador</span></a>
+        <a href="https://servicos.decea.mil.br/sarpas/" target="_blank" rel="noopener"><b>SARPAS · DECEA</b><span>Pedido de autorização de voo</span></a>
+        <a href="https://www.decea.mil.br/drone/" target="_blank" rel="noopener"><b>DECEA · Drones</b><span>ICA 100-40 e espaço aéreo</span></a>
+        <a href="https://www.gov.br/anatel/pt-br" target="_blank" rel="noopener"><b>Anatel</b><span>Homologação de equipamentos de rádio</span></a>
+      </div>
+      <p class="muted aviso-legal">Esta página é um resumo feito pela equipe TechFire para o TCC. Ela não substitui os textos oficiais das normas.</p>
+    </div>
+  </div>
+</div>
+</main>
+
+<!-- Rodapé: montado pelo js/layout.js -->
+<div id="rodape"></div>
+
+<script src="../js/config.js"></script>
+<script src="../js/utils.js"></script>
+<script src="../js/layout.js"></script>
+<script src="fabricante.js"></script>
+</body>
+</html>

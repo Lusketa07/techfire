@@ -1,0 +1,39 @@
+/* =====================================================================
+   PÁGINA EXPERIÊNCIA (experiencia.html)
+   O histórico de ocorrências são os exemplos de HISTORICO abaixo.
+   ===================================================================== */
+const JORNADA = [
+  ["Cadastro", "Cria a conta no site"], ["Login", "Entra no painel"], ["Conexão", "Liga e conecta o drone"], ["Voo", "Define a área e decola"],
+  ["Monitoramento", "Acompanha vídeo e GPS"], ["Alerta", "Recebe aviso de foco"], ["Registro", "Confirma a ocorrência"], ["Relatório", "Consulta o histórico"]
+];
+
+/* Exemplos de ocorrências */
+const HISTORICO = [
+  ["04/10/2026 14:32", "-23.6651, -46.7809", "94%", "Em atendimento"],
+  ["02/10/2026 11:05", "-23.6689, -46.7852", "88%", "Controlado"],
+  ["28/09/2026 16:47", "-23.6630, -46.7867", "61%", "Falso alarme"],
+  ["25/09/2026 09:18", "-23.6702, -46.7795", "97%", "Controlado"],
+  ["21/09/2026 15:56", "-23.6618, -46.7824", "90%", "Controlado"]
+];
+const COR_SITUACAO = { "Em atendimento": "", "Controlado": "leaf", "Falso alarme": "amber" };
+
+function mostrarHistorico(linhas) {
+  $("#histBody").innerHTML = linhas.map(([d, l, t, s]) =>
+    `<tr><td class="num">${esc(d)}</td><td class="num">${esc(l)}</td><td class="num"><b>${esc(t)}</b></td><td><span class="tag ${COR_SITUACAO[s] ?? ""}">${esc(s)}</span></td></tr>`).join("");
+}
+
+iniciarPagina("ux", () => {
+  $("#journeyList").innerHTML = JORNADA.map(([t, d]) => `<div><b>${t}</b><span class="muted">${d}</span></div>`).join("");
+
+  const temps = Array.from({ length: 24 }, (_, h) => Math.round(24 + 10 * Math.sin((h - 9) / 24 * Math.PI * 2) + (h === 14 ? 34 : h === 15 ? 20 : 0) + Math.random() * 4));
+  $("#bars").innerHTML = temps.map((v, h) => `<i class="${v > 45 ? "hot" : v > 33 ? "warm" : ""}" style="height:${Math.min(100, v / 70 * 100)}%" title="${h}h: risco ${Math.min(100, Math.round(v / 70 * 100))}%"></i>`).join("");
+  $("#alertTime").textContent = new Date().toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" });
+
+  const { lat, lon } = CONFIG.mapa, dlt = .01;
+  $("#mapBox").innerHTML = `<iframe title="Mapa com a posição do drone" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=${lon - dlt}%2C${lat - dlt}%2C${lon + dlt}%2C${lat + dlt}&layer=mapnik&marker=${lat}%2C${lon}"></iframe>`;
+
+  $$("[data-toast]").forEach(b => b.addEventListener("click", () => toast(b.dataset.toast)));
+
+  Telemetria.iniciar();
+  mostrarHistorico(HISTORICO);
+});

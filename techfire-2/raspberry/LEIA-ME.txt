@@ -1,0 +1,11 @@
+ARQUIVOS PARA O RASPBERRY PI DO DRONE
+=====================================
+
+transmitir_twitch.sh  -> transmite a câmera Arducam para a Twitch
+                         (passo a passo: página Conexão > Câmera do site)
+
+IMPORTANTE
+- Coloque a chave da Twitch só na cópia que fica no Pi.
+  Não publique esse arquivo com a chave preenchida.
+- Se editar o arquivo no Windows, converta as quebras de linha antes de rodar no Pi:
+      sed -i 's/\r$//' transmitir_twitch.sh

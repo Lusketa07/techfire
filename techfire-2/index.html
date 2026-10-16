@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TechFire · GuardFlame 1.0</title>
+<meta name="description" content="TechFire GuardFlame: drone que detecta focos de incêndio florestal no começo, transmite ao vivo e ajuda nos resgates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  /* Aplica o tema salvo antes de desenhar a página (evita "piscar") */
+  try { var t = localStorage.getItem('gf_tema'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+<link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<!-- Topo (menu): montado pelo js/layout.js -->
+<div id="topo"></div>
+
+<main>
+
+<!-- ============ ABERTURA ============ -->
+<section class="abertura">
+  <div class="fundo" aria-hidden="true"></div>
+  <div class="brasas" id="brasas" aria-hidden="true"></div>
+  <div class="mata" id="mata" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <span class="selo"><span data-icon="flame"></span>Prevenção e combate a incêndios florestais</span>
+    <h1>Cada minuto conta quando a mata pega fogo.</h1>
+    <p class="lead">Um pequeno foco vira um incêndio em minutos e leva junto árvores, animais, casas e vidas. O GuardFlame encontra o fogo no começo, quando ainda dá para apagar, e leva a informação a quem pode agir.</p>
+    <div class="ctas">
+      <a class="btn btn-fire" href="#projeto">Conheça o projeto<span data-icon="arrow"></span></a>
+      <a class="btn btn-vidro" href="aovivo/aovivo.html"><span data-icon="radio"></span>Assistir ao vivo</a>
+    </div>
+    <div class="numeros">
+      <div><b class="num">30,8 mi</b><span>de hectares queimados no Brasil em 2024 <small>(MapBiomas Fogo)</small></span></div>
+      <div><b class="num">10x</b><span>mais rápido que a vigilância manual</span></div>
+      <div><b class="num">24/7</b><span>de monitoramento</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ O PROBLEMA ============ -->
+<section class="section" id="problema">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag"><span data-icon="alert"></span>O problema</span>
+      <h2>Por que as matas pegam fogo?</h2>
+      <p class="muted">Alguns incêndios começam sozinhos, mas a grande maioria começa pela mão humana, por crime, costume ou descuido.</p>
+    </div>
+
+    <div class="causas">
+      <div class="card causa-natural">
+        <h3><span class="ic amber" data-icon="sun"></span>Causas naturais</h3>
+        <p class="muted">Raras, mas acontecem, sobretudo na estação seca.</p>
+        <ul class="lista-ic">
+          <li><span data-icon="zap"></span><div><b>Raios</b>Descargas elétricas em tempestades secas acendem a vegetação.</div></li>
+          <li><span data-icon="thermo"></span><div><b>Calor extremo</b>Ondas de calor deixam folhas e galhos prontos para queimar.</div></li>
+          <li><span data-icon="cloud"></span><div><b>Seca prolongada</b>Pouca chuva e umidade baixa fazem o fogo se espalhar muito rápido.</div></li>
+        </ul>
+      </div>
+      <div class="card causa-humana">
+        <h3><span class="ic" data-icon="users"></span>Ação humana: a principal causa</h3>
+        <p>O fogo quase sempre começa com alguém.</p>
+        <ul class="lista-ic duas">
+          <li><span data-icon="flame"></span><div><b>Queimadas criminosas</b>Fogo ateado de propósito em matas e reservas.</div></li>
+          <li><span data-icon="tree"></span><div><b>Desmatamento</b>Queimar a mata derrubada para abrir pasto e lavoura.</div></li>
+          <li><span data-icon="zap"></span><div><b>Limpeza de terreno</b>Fogo “controlado” em lixo e capim que sai do controle.</div></li>
+          <li><span data-icon="ban"></span><div><b>Bitucas de cigarro</b>Jogadas acesas na beira de estradas e trilhas.</div></li>
+          <li><span data-icon="cloud"></span><div><b>Balões</b>Caem ainda acesos em matas, casas e fios (soltar balão é crime).</div></li>
+          <li><span data-icon="alert"></span><div><b>Negligência</b>Fogueiras mal apagadas, churrasqueiras e faíscas de máquinas.</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub-titulo">Os impactos</h3>
+    <div class="grid g4">
+      <div class="card impacto"><div class="ic leaf" data-icon="tree"></div><h3>Meio ambiente</h3><p class="muted">Perda de florestas, solo empobrecido, rios assoreados e muito gás carbônico liberado no ar.</p></div>
+      <div class="card impacto"><div class="ic" data-icon="paw"></div><h3>Fauna</h3><p class="muted">Animais lentos, filhotes e ninhos não conseguem fugir. Quem sobrevive perde abrigo e alimento.</p></div>
+      <div class="card impacto"><div class="ic amber" data-icon="heart"></div><h3>População</h3><p class="muted">Fumaça que causa doenças respiratórias, casas destruídas, estradas fechadas e famílias desalojadas.</p></div>
+      <div class="card impacto"><div class="ic" data-icon="coins"></div><h3>Economia</h3><p class="muted">Lavouras, pastos, cercas e redes elétricas perdidos, além do alto custo para combater o fogo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ O PROJETO ============ -->
+<section class="section alt" id="projeto">
+  <div class="wrap">
+    <div class="projeto">
+      <div>
+        <span class="tag"><span data-icon="drone"></span>O projeto</span>
+        <h2>TechFire GuardFlame: um vigia no céu</h2>
+        <p class="lead-sm">Um drone com Raspberry Pi, GPS, câmeras e sensores que sobrevoa áreas de mata para encontrar focos de calor e fumaça no começo, antes que o fogo se espalhe.</p>
+        <p class="muted">A inteligência artificial analisa a imagem durante o voo. Quando encontra sinais de fogo, o sistema marca a posição exata no mapa e avisa na hora pela internet 4G. Assim a brigada vai direto ao ponto, sem perder tempo procurando.</p>
+      </div>
+      <ol class="fluxo-voo">
+        <li><span data-icon="drone"></span><div><b>Sobrevoa</b>Patrulha a área de risco seguindo uma rota.</div></li>
+        <li><span data-icon="search"></span><div><b>Detecta</b>Câmeras e IA encontram calor e fumaça.</div></li>
+        <li><span data-icon="pin"></span><div><b>Localiza</b>O GPS marca a latitude e a longitude do foco.</div></li>
+        <li><span data-icon="bell"></span><div><b>Avisa</b>O alerta e o vídeo chegam ao painel em segundos.</div></li>
+      </ol>
+    </div>
+
+    <div class="grid g4" style="margin-top:40px">
+      <div class="card"><div class="ic" data-icon="eye"></div><h3>Detecção por imagem</h3><p class="muted">A câmera Arducam de 12 MP e a IA no Raspberry Pi reconhecem fogo e fumaça.</p></div>
+      <div class="card"><div class="ic" data-icon="pin"></div><h3>GPS preciso</h3><p class="muted">Cada foco vem com latitude e longitude para a equipe ir direto ao ponto.</p></div>
+      <div class="card"><div class="ic" data-icon="wifi"></div><h3>Transmissão 4G</h3><p class="muted">Vídeo ao vivo e alertas enviados mesmo longe de qualquer Wi-Fi.</p></div>
+      <div class="card"><div class="ic" data-icon="mic"></div><h3>Comunicação por voz</h3><p class="muted">Alto-falantes avisam quem está na área do perigo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DETECÇÃO E RESGATES ============ -->
+<section class="section" id="resgates">
+  <div class="wrap resgate">
+    <div class="tela-drone" aria-label="Exemplo da visão do drone durante o voo" role="img">
+      <div class="mira foco"><span>Foco detectado</span></div>
+      <div class="mira pessoa"><span>Pessoa localizada</span></div>
+      <div class="hud-topo"><span class="rec">AO VIVO · GuardFlame 1.0</span></div>
+      <div class="hud-pe num">-23.66607, -46.77904 · ALT 60 m</div>
+    </div>
+    <div>
+      <span class="tag"><span data-icon="target"></span>Detecção e resgates</span>
+      <h2>Onde o drone faz a diferença</h2>
+      <ul class="lista-ic grande">
+        <li><span data-icon="flame"></span><div><b>Identificação de focos</b>Encontra o fogo ainda pequeno, inclusive atrás de morros e no meio da mata, onde ninguém consegue ver do chão.</div></li>
+        <li><span data-icon="radio"></span><div><b>Monitoramento em tempo real</b>Vigia as áreas de risco e mostra para onde o fogo e a fumaça estão indo, ao vivo.</div></li>
+        <li><span data-icon="shield"></span><div><b>Apoio às equipes de combate</b>Brigadistas e bombeiros decidem com a imagem do alto: por onde entrar, onde atacar e qual é a rota de fuga segura.</div></li>
+        <li><span data-icon="paw"></span><div><b>Resgates</b>Localiza pessoas e animais em áreas de difícil acesso, envia a posição para as equipes e fala com quem está no chão pelo alto-falante.</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA QUEM É ============ -->
+<section class="section tight">
+  <div class="wrap">
+    <div class="section-head"><h2>Para quem é</h2></div>
+    <div class="audience">
+      <div><div class="ic" data-icon="building"></div><h3>Órgãos ambientais</h3><p class="muted">Fiscalização de reservas e parques.</p></div>
+      <div><div class="ic" data-icon="shield"></div><h3>Brigadas de incêndio</h3><p class="muted">Resposta mais rápida e segura.</p></div>
+      <div><div class="ic" data-icon="tree"></div><h3>Produtores rurais</h3><p class="muted">Proteção de lavouras e pastagens.</p></div>
+      <div><div class="ic" data-icon="users"></div><h3>Defesa Civil</h3><p class="muted">Informação confiável para decidir.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAMADA FINAL ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="goal chamada">
+      <div>
+        <h2>Tecnologia que salva vidas e florestas</h2>
+        <p>Conheça como o GuardFlame foi construído, veja o drone ao vivo e entenda como um projeto de escola pode proteger a mata, os animais e as pessoas.</p>
+        <div class="ctas">
+          <a class="btn btn-branco" href="login/login.html" data-so-visitante hidden>Entrar no painel<span data-icon="arrow"></span></a>
+          <a class="btn btn-vidro" href="manual/manual.html">Como funciona</a>
+        </div>
+      </div>
+      <nav class="atalhos" aria-label="Conheça o site">
+        <a href="aovivo/aovivo.html"><span data-icon="radio"></span>Ao vivo</a>
+        <a href="produto/produto.html"><span data-icon="chip"></span>O produto</a>
+        <a href="equipe/equipe.html"><span data-icon="users"></span>Quem somos</a>
+        <a href="fabricante/fabricante.html"><span data-icon="file"></span>Normas da ANAC</a>
+      </nav>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Rodapé: montado pelo js/layout.js -->
+<div id="rodape"></div>
+
+<script src="js/config.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
