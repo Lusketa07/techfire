@@ -22,7 +22,16 @@ const Transmissao = {
     };
     if (acts) acts.innerHTML = "";
 
-    if (L.tipo === "twitch" && L.twitchCanal) {
+    if (L.tipo === "twitch" && L.twitchVideo) {
+      /* VOD: vídeo gravado de uma live (twitch.tv/videos/NUMERO) */
+      const id = encodeURIComponent(String(L.twitchVideo).trim().replace(/^.*videos\//i, "").replace(/^v/i, "").replace(/[/?#].*$/, ""));
+      if (acts) acts.innerHTML = `<a class="btn btn-fire btn-sm" href="https://www.twitch.tv/videos/${id}" target="_blank" rel="noopener"><span>${icon("radio")}</span>Abrir na Twitch</a>`;
+      if (this.twitchPossivel()) {
+        add(`<iframe src="https://player.twitch.tv/?video=v${id}&parent=${encodeURIComponent(location.hostname)}&autoplay=false" title="Gravação da transmissão do drone na Twitch" allow="autoplay; fullscreen" allowfullscreen></iframe>`);
+      } else {
+        offline("Publique o site (ou abra pelo XAMPP) para ver o vídeo da Twitch aqui — ou use o botão Abrir na Twitch");
+      }
+    } else if (L.tipo === "twitch" && L.twitchCanal) {
       const canal = encodeURIComponent(L.twitchCanal.trim().toLowerCase());
       if (acts) acts.innerHTML = `<a class="btn btn-fire btn-sm" href="https://www.twitch.tv/${canal}" target="_blank" rel="noopener"><span>${icon("radio")}</span>Abrir na Twitch</a>`;
       if (this.twitchPossivel()) {

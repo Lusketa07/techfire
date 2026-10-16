@@ -14,7 +14,7 @@ const CONFIG = {
      Contas criadas pelo botão "Criar conta" ficam salvas só no navegador onde foram criadas. */
   contas: [
     { nome: "Tiago Maia",     email: "tiago@techfire.com",   senha: "guardflame" },
-    { nome: "Lucca Carvalho", email: "lucca@techfire.com",   senha: "guardflame" },
+    { nome: "Lucca Santos", email: "lucca@techfire.com",   senha: "guardflame" },
     { nome: "Melissa Fontes", email: "melissa@techfire.com", senha: "guardflame" }
   ],
 
@@ -29,6 +29,7 @@ const CONFIG = {
   aoVivo: {
     tipo: "twitch",
     twitchCanal: "lusketaxrc",        // nome do canal, ex.: "techfire_guardflame" (o que aparece em twitch.tv/NOME)
+    twitchVideo: "",        // VOD (live gravada): número de twitch.tv/videos/NUMERO, ex.: "2271234567" — vazio = mostra o canal ao vivo
     youtubeId: "",          // ID do vídeo da live, ex.: "dQw4w9WgXcQ"
     youtubeCanal: "",       // OU o ID do canal (UC...), mostra a live atual do canal
     hlsUrl: "",             // ex.: "https://seu-servidor/drone/index.m3u8"
@@ -44,11 +45,12 @@ const CONFIG = {
   videoJogo:   { arquivo: "videos/jogo.mp4",   youtube: "" },
   linkJogo: "https://gd.games/guilhermemoraes/melissa-jogo",          // link para jogar (itch.io, GitHub Pages, etc.)
 
-  /* ---------- EQUIPE ---------- */
+  /* ---------- EQUIPE ----------
+     foto (opcional): imagem em equipe/fotos/ — sem foto mostra as iniciais */
   equipe: [
-    { nome: "Tiago Maia",      funcao: "Programação e banco de dados" },
-    { nome: "Lucca Carvalho",  funcao: "Hardware e montagem do drone" },
-    { nome: "Melissa Fontes",  funcao: "Design e site" }
+    { nome: "Tiago Maia",      funcao: "Programação e banco de dados", foto: "equipe/fotos/tiago.jpg" },
+    { nome: "Lucca Santos",  funcao: "Hardware e montagem do drone", foto: "equipe/fotos/lucca.jpg" },
+    { nome: "Melissa Fontes",  funcao: "Design e site", foto: "equipe/fotos/melissa.jpg" }
   ],
   sobre: "O TechFire GuardFlame é um Trabalho de Conclusão de Curso: um drone F450 com controladora Pixhawk, Raspberry Pi 4, câmera Arducam de 12 MP, GPS e internet 4G que detecta focos de incêndio florestal, transmite o voo ao vivo e avisa as pessoas da área por voz.",
 

@@ -5,7 +5,7 @@
 iniciarPagina("equipe", () => {
   $("#teamList").innerHTML = CONFIG.equipe.map(m => {
     const ini = m.nome.split(" ").map(w => w[0]).slice(0, 2).join("").toUpperCase();
-    return `<div class="card member"><div class="avatar">${ini}</div>
+    return `<div class="card member"><div class="avatar">${m.foto ? `<img src="${esc(caminho(m.foto))}" alt="Foto de ${esc(m.nome)}">` : ini}</div>
       <h3 style="margin:0">${esc(m.nome)}</h3><p class="muted" style="font-size:.9rem">${esc(m.funcao)}</p></div>`;
   }).join("");
   $("#aboutText").textContent = CONFIG.sobre;
