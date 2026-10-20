@@ -55,5 +55,5 @@ const CONFIG = {
   sobre: "O TechFire GuardFlame é um Trabalho de Conclusão de Curso: um drone F450 com controladora Pixhawk, Raspberry Pi 4, câmera Arducam de 12 MP, GPS e internet 4G que detecta focos de incêndio florestal, transmite o voo ao vivo e avisa as pessoas da área por voz.",
 
   precoKit: "",   // vazio = soma automática dos componentes
-  mapa: { lat: -23.66607, lon: -46.77904, local: "prédio do Ensino Médio (UNASP SP)" }   // onde o drone fica parado (Colégio UNASP – Campus São Paulo)
+  mapa: { lat: -23.6670237, lon: -46.7796974, local: "prédio do Fundamental II (UNASP SP)" }   // onde o drone fica parado (Colégio UNASP – Campus São Paulo)
 };
